@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_and_signup/forgot_password.dart';
+import 'package:login_and_signup/home_page.dart';
 import 'package:login_and_signup/signup.dart';
 
 class LoginPage extends StatefulWidget {
@@ -55,7 +56,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               ElevatedButton(
                 style: const ButtonStyle(),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context) {
+                      return const HomePage();
+                    }),
+                  );
+                },
                 child: const Text("LOGIN"),
               ),
               const SizedBox(
